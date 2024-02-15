@@ -28,6 +28,7 @@ nav {
   top: 0%;
   align-items: center;
   z-index: 20;
+  animation: slideInDown 2s ease 0s;
 }
 .nav_bg_color {
   background-color: white;
@@ -90,11 +91,13 @@ nav {
   width: 28%;
   margin: 0px;
   padding: 0px;
+  animation: slideInDown 3s ease 0s;
 }
 .header__text p {
   width: 35%;
   margin: 20px 0px;
   padding: 0px;
+  animation: slideInLeft 4.5s ease 0s;
 }
 .header__text button {
   width: 100px;
@@ -104,6 +107,7 @@ nav {
   background-color: #00a205;
   border-radius: 10%;
   margin: 10px 0px;
+  animation: slideInUp 2s ease 0s;
 }
 /*main*/
 main {
@@ -450,6 +454,16 @@ footer{
   color:  black;
   margin: 1.5rem 0rem;
 }
+.choose__category_active{
+  animation: slideInUp 2s ease 0s;
+}
+.services__img__active{
+  animation: zoomIn 3s ease 0s;
+}
+.service__text__active{
+  animation: slideInUp 3s ease 0s;
+
+}
 @media screen and (max-width: 1000px) {
   .category ul li a {
     color: #00a205;
@@ -723,4 +737,5 @@ footer{
   .social__media__category div{
     width: 100%;
   }
+ 
 }

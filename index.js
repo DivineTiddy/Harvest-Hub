@@ -205,7 +205,7 @@ const forFeatured__Services = `
 <h2>Featured Services</h2>
         <div class="Services__container">
           <div class="Services">
-            <img
+            <img class = "services__img"
               src="photo1.png"
               width="100%"
               height="60%"
@@ -213,14 +213,14 @@ const forFeatured__Services = `
               loading="lazy"
             />
             <h3>Precision Farming Tools</h3>
-            <p>
+            <p class = "service__text">
               Enhance productivity and reduce waste with our precision farming
               tools. From GPS-guided tractors to sensor-based irrigation
               systems, we have the tools you need for efficient farming.
             </p>
           </div>
           <div class="Services">
-            <img
+            <img class = "services__img"
               src="photo2.jpg"
               width="100%"
               height="60%"
@@ -228,14 +228,14 @@ const forFeatured__Services = `
               loading="lazy"
             />
             <h3>Sustainable Practices Workshops</h3>
-            <p>
+            <p class = "service__text">
               Participate in workshops and webinars to learn about the latest
               sustainable farming practices. Stay ahead of the curve and make a
               positive impact on the environment.
             </p>
           </div>
           <div class="Services">
-            <img
+            <img class = "services__img"
               src="photo3.jpg"
               width="100%"
               height="60%"
@@ -243,7 +243,7 @@ const forFeatured__Services = `
               loading="lazy"
             />
             <h3>Crop Monitoring and Analysis</h3>
-            <p>
+            <p class = "service__text">
               Utilize cutting-edge technology to monitor crop health, detect
               diseases early, and optimize irrigation schedules. Our advanced
               analytics ensure you stay one step ahead in crop management.
@@ -255,10 +255,75 @@ const forFeatured__Services = `
 Featured__Services.insertAdjacentHTML(`afterbegin`, forFeatured__Services);
 ///////////////////////////////////////////////////////////////////////////////////////
 //Blog__profile__container
-const Blog__profile__container = document.querySelector(`.Blog__profile__container`);
+const Blog__profile__container = document.querySelector(
+  `.Blog__profile__container`
+);
 const forBlog__profile__container = `
 
 
 
-`
-Blog__profile__container.insertAdjacentHTML(`afterbegin`, forBlog__profile__container)
+`;
+Blog__profile__container.insertAdjacentHTML(
+  `afterbegin`,
+  forBlog__profile__container
+);
+
+//choose__category
+const choose__category = document.querySelectorAll(`.choose__category`);
+window.addEventListener(`scroll`, function () {
+  const x = (window.innerHeight / 4) * 4;
+  choose__category.forEach((choos) => {
+    const tagget = choos.getBoundingClientRect().top;
+    if (tagget < x) {
+      choos.classList.add(`choose__category_active`);
+    }
+  });
+});
+
+// our__story__section
+
+window.addEventListener(`scroll`,function () {
+  const x = (window.innerHeight / 4) * 4;
+  const tagget = our__story__section.getBoundingClientRect().top;
+  if (tagget < x) {
+    our__story__section.classList.add(`choose__category_active`)
+  }
+
+
+  
+})
+
+//services__img
+
+const service__text = document.querySelectorAll(`.service__text`)
+const services__img = document.querySelectorAll(`.services__img`)
+console.log(services__img);
+window.addEventListener(`scroll`,function () {
+  const x = (window.innerHeight / 4) * 4;
+  services__img.forEach(img => {
+    const tagget = img.getBoundingClientRect().top;
+    if (tagget < x) {
+      img.classList.add(`services__img__active`)
+     
+    }
+    
+  });
+})
+//service__text
+window.addEventListener(`scroll`,function () {
+  const x = (window.innerHeight / 4) * 4;
+  service__text.forEach(serviceText => {
+    const tagget = serviceText.getBoundingClientRect().top;
+    if (tagget < x) {
+      serviceText.classList.add(`service__text__active`)
+     
+    }
+    
+  });
+})
+
+
+
+
+
+
