@@ -18,6 +18,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 nav {
   width: 90%;
@@ -86,18 +87,20 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 .header__text h2 {
   width: 28%;
   margin: 0px;
   padding: 0px;
-  animation: slideInDown 3s ease 0s;
 }
 .header__text p {
   width: 35%;
   margin: 20px 0px;
   padding: 0px;
-  animation: slideInLeft 4.5s ease 0s;
+  transition: all 3s;
+
+
 }
 .header__text button {
   width: 100px;
@@ -107,7 +110,7 @@ nav {
   background-color: #00a205;
   border-radius: 10%;
   margin: 10px 0px;
-  animation: slideInUp 2s ease 0s;
+  transition: all 3s;
 }
 /*main*/
 main {
@@ -298,7 +301,7 @@ margin: 7rem 0rem;}
 }
 
 .btn {
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .slider__indecate {
   height: 20px;
@@ -409,7 +412,7 @@ margin: 7rem 0rem;}
   background-color: #00a205;
   color: white;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 .agrc__section h3{
   text-align: center;
@@ -458,11 +461,10 @@ footer{
   animation: slideInUp 2s ease 0s;
 }
 .services__img__active{
-  animation: zoomIn 3s ease 0s;
+  animation: zoomIn 1s ease 0s;
 }
 .service__text__active{
-  animation: slideInUp 3s ease 0s;
-
+  animation: slideInUp 2s ease 0s;
 }
 @media screen and (max-width: 1000px) {
   .category ul li a {
