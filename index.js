@@ -467,7 +467,7 @@ const html = `
 </section>
 </main>
 <footer>
-<section class="social__media"></section>
+<section class="social__media check"></section>
 </footer>
 
 
@@ -815,7 +815,6 @@ window.addEventListener(`scroll`,function () {
 
 const service__text = document.querySelectorAll(`.service__text`)
 const services__img = document.querySelectorAll(`.services__img`)
-console.log(services__img);
 window.addEventListener(`scroll`,function () {
   const x = (window.innerHeight / 4) * 4;
   services__img.forEach(img => {
@@ -840,6 +839,7 @@ window.addEventListener(`scroll`,function () {
   });
 })
 
+//Blog__profile
 
 
 

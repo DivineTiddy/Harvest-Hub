@@ -126,7 +126,11 @@ main {
   height: auto;
   display: flex;
   align-items: center;
-margin: 7rem 0rem;}
+margin: 7rem 0rem;
+transform: translateY(10rem);
+filter: opacity(10%);
+
+}
 .our__story__section p {
   width: 70%;
   font-size: 15px;
@@ -153,6 +157,8 @@ margin: 7rem 0rem;}
 .choose__category {
   width: 45%;
   height: auto;
+  transform: translateY(10rem);
+  filter: opacity(10%);
 }
 .choose__category p {
   font-size: 12px;
@@ -218,6 +224,14 @@ margin: 7rem 0rem;}
 .Services {
   height: auto;
   width: 30%;
+}
+.service__text{
+  filter: opacity(10%);
+  transform: translateY(10rem);
+}
+.services__img{
+  filter: opacity(10%);
+  transform: translateY(10rem);
 }
 /*Customer__say*/
 
@@ -458,13 +472,19 @@ footer{
   margin: 1.5rem 0rem;
 }
 .choose__category_active{
-  animation: slideInUp 2s ease 0s;
+  transform: translateY(0rem);
+filter: opacity(100%);
+transition: 3s;
 }
 .services__img__active{
-  animation: zoomIn 1s ease 0s;
+  filter: opacity(100%);
+  transform: translateY(0rem);
+  transition: 3s;
 }
 .service__text__active{
-  animation: slideInUp 2s ease 0s;
+  filter: opacity(100%);
+  transform: translateY(0rem);
+  transition: 3s;
 }
 @media screen and (max-width: 1000px) {
   .category ul li a {
